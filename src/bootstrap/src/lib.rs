@@ -335,6 +335,7 @@ impl Build {
         let rustfmt_info = GitInfo::new(omit_git_hash, &src.join("src/tools/rustfmt"));
 
         // we always try to use git for LLVM builds
+        // maybe
         let in_tree_llvm_info = GitInfo::new(false, &src.join("src/llvm-project"));
 
         let initial_target_libdir_str = if config.dry_run() {
